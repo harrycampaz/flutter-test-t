@@ -48,12 +48,12 @@ class _RestaurantSearchPageState extends State<RestaurantSearchPage>
                   return Center(child: CircularProgressIndicator());
                   break;
                 case ConnectionState.active:
-                  return Column(
+                  return ListView(
                       children: _buildResult(snapshot.data.documents)
                   );
                   break;
                 case ConnectionState.done:
-                  return Column(
+                  return ListView(
                     children: _buildResult(snapshot.data.documents)
                   );
                   break;
